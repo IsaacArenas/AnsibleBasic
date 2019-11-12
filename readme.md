@@ -20,7 +20,6 @@ $ ansible-playbook  "playbook.yml" --ask-vault-pass --extra-vars variable_host=c
 $ ansible-playbook  "playbook.yml" --ask-vault-pass
 #passing the vault password in a file 
 $ ansible-playbook  "playbook.yml" --vault-password-file ~/.vault_pass.txt
-
 ```
 
 to create the ansible-vault file 
