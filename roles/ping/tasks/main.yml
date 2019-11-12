@@ -1,0 +1,3 @@
+# Disabling warnings
+- name: role Task 1
+  debug: msg="name is {{ i_name }} {{ i_lastname }}"

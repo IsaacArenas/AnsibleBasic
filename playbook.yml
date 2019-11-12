@@ -1,0 +1,20 @@
+---
+- hosts: "{{ variable_host | default('localhost') }}"
+  
+  pre_tasks:
+  - name: include vars and vault for env
+    include_vars: "{{ item }}.yml"
+    tags: ["always"]
+    with_items:
+     - variables
+     - vault-variables
+
+  roles:
+    - ping
+  
+  post_tasks:
+    - name: Executing Post Tasks 1
+      debug: msg="post tasks {{ username }}"
+
+    - name: Executing Post Tasks 2
+      debug: msg="post {{password}}"
