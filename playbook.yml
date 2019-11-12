@@ -17,4 +17,4 @@
       debug: msg="post tasks {{ username }}"
 
     - name: Executing Post Tasks 2
-      debug: msg="post {{password}}"
+      debug: msg="post {{ password }}"
